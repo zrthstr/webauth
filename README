@@ -1,10 +1,10 @@
+# Web Auth - web auth implementations for educational purpose (not for human consumption)
 
-# OIDC
+## OIDC
 implemented as in https://realpython.com/flask-google-login/
 
-## usage
-
 ### oauth setup
+* cd OICD
 * goto https://console.developers.google.com/apis/credentials
 ** create new credentials / Oauth Client ID 
 ** set Authorized JavaScript origins to https://127.0.0.1:5000
@@ -16,3 +16,12 @@ implemented as in https://realpython.com/flask-google-login/
 	make run  # on first run sqlite db will be initialized
 	make run
 
+goto https://127.0.0.1:5000
+
+
+## Basic access authentication / RFC 7617
+
+	cd BasicAccessAuthentication
+	make run
+goto http://127.0.0.1:5000
+use admin / admin 

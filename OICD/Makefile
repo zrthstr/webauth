@@ -1,7 +1,9 @@
 
 env:
 	#poetry init
-	poetry shell
+	#poetry shell
+	#poetry update
+	poetry install
 
 run:
-	bash SECRETS && python app.py
+	bash SECRETS && poetry run python app.py
