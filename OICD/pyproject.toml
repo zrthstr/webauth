@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "webauth"
+version = "0.1.0"
+description = "learning about oauth"
+authors = ["zrthstr <zrth1k@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+Flask = "^2.0.1"
+oauthlib = "^3.1.0"
+pyOpenSSL = "^20.0.1"
+Flask-Login = "^0.5.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
