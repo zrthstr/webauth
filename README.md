@@ -18,10 +18,16 @@ implemented as in https://realpython.com/flask-google-login/
 
 goto https://127.0.0.1:5000
 
-
 ## Basic access authentication / RFC 7617
+see https://flask-httpauth.readthedocs.io/en/latest/
 
 	cd BasicAccessAuthentication
 	make run
 goto http://127.0.0.1:5000
 use admin / admin 
+
+## SessionCookieVanilla
+	cd SessionCookieVanilla
+	make run
+goto http://127.0.0.1:5000
+use ```admin``` ```secure```
