@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sessioncookievanilla"
+version = "0.1.0"
+description = ""
+authors = ["zrthstr <zrth1k@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^1.1.4"
+Flask-Login = "^0.5.0"
+pyOpenSSL = "^20.0.1"
+Flask-WTF = "^0.15.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
