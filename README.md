@@ -27,6 +27,12 @@ goto http://127.0.0.1:5000
 use admin / admin 
 
 ## SessionCookieVanilla
+see:
+* https://flask-login.readthedocs.io/en/latest/
+* https://github.com/marcelomd/flask-wtf-login-example/blob/master/app/models.py
+
+
+### run
 	cd SessionCookieVanilla
 	make run
 goto http://127.0.0.1:5000
