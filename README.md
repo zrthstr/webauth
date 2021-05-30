@@ -6,11 +6,11 @@ implemented as in https://realpython.com/flask-google-login/
 ### oauth setup
 * cd OICD
 * goto https://console.developers.google.com/apis/credentials
-** create new credentials / Oauth Client ID 
-** set Authorized JavaScript origins to https://127.0.0.1:5000
-** set Authorized redirect URIs to https://127.0.0.1:5000/login/callback.
-** note of the client ID and client secret
-* populate ```SECRETS``` see ```SECRETS.blank```
+	* create new credentials / Oauth Client ID 
+	* set Authorized JavaScript origins to https://127.0.0.1:5000
+	* set Authorized redirect URIs to https://127.0.0.1:5000/login/callback.
+	* note of the client ID and client secret
+* populate ```SECRETS```, see ```SECRETS.blank```
 
 ### run
 	make run  # on first run sqlite db will be initialized
