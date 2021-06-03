@@ -21,22 +21,42 @@ async function makeRequestWithJWT() {
 	};
 	const response = await fetch('/protected', options);
 	const result = await response.json();
-	return result;
+	//return result;
 
+//document.getElementById("api").innerHTML = result;
+
+	return result;
 }
 
 function showJWT(){
 	document.getElementById("jwt").innerHTML = localStorage.getItem("jwt")
 }
+
+function handle(){
+	makeRequestWithJWT().then((value) => {
+		console.log(value);
+		document.getElementById("api").innerHTML = JSON.stringify(value);
+	})
+}
+
+
 </script>
 
 <button onclick="login()">login</button>
 <button onclick="logout()">logout</button>
-<button onclick="console.log(makeRequestWithJWT())">console.log "protected" data</button> <br>
+<button onclick="handle()">fetch and display "protected" data from api</button> <br>
 
-localStorage jwt:
-<p id="jwt"> </p>
+<br>
+<code>localStorage jwt:</code>
+<pre>
+<code id="jwt">login to display jwt</code>
+</pre>
+<code>API data:</code>
+<pre>
+<code id="api">click button to fetch data</code>
+</pre>
+
 
 <script> 
-showJWT()
+	showJWT();
 </script>
