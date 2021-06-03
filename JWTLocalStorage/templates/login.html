@@ -1,0 +1,42 @@
+<script>
+
+async function login() {
+	const response = await fetch('/login_with_headers', {method: 'post'});
+	const result = await response.json();
+	localStorage.setItem('jwt', result.access_token);
+	showJWT();
+}
+
+function logout() {
+	localStorage.removeItem('jwt');
+	showJWT();
+}
+
+async function makeRequestWithJWT() {
+	const options = {
+		method: 'post',
+		headers: {
+		  Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+		}
+	};
+	const response = await fetch('/protected', options);
+	const result = await response.json();
+	return result;
+
+}
+
+function showJWT(){
+	document.getElementById("jwt").innerHTML = localStorage.getItem("jwt")
+}
+</script>
+
+<button onclick="login()">login</button>
+<button onclick="logout()">logout</button>
+<button onclick="console.log(makeRequestWithJWT())">console.log "protected" data</button> <br>
+
+localStorage jwt:
+<p id="jwt"> </p>
+
+<script> 
+showJWT()
+</script>
