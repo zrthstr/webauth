@@ -26,16 +26,16 @@ def protected():
     return jsonify(something="somethingelse")
 
 
+#@app.route("/")
+#def index():
+#    return """<a href="/protected"> protected </a> <br> <a href="/login"> login </a>"""
+
+
 @app.route("/")
-def index():
-    return """<a href="/protected"> protected </a> <br> <a href="/login"> login </a>"""
-
-
-@app.route("/login")
 def login():
     #return render_tempalte("login.html", form=form)
     return render_template("login.html")
 
 
 if __name__ == "__main__":
-    app.run(ssl_context="adhoc", debug=True)
+    app.run(ssl_context="adhoc")
